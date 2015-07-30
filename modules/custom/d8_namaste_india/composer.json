@@ -1,0 +1,5 @@
+{
+    "name": "drupal/d8_namaste_india",
+    "description" : "This is composer.json for d8_namaste_india module.",
+    "type" : "drupal8-module"    
+}

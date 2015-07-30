@@ -1,0 +1,21 @@
+## YAML Template.
+---
+##first line is reserving a named space
+
+##This will add a link within the administration pages of your site under 
+##the Configuration tab in the Development section. 
+##You will need, of course, to clear your cache for the change to take effect.
+d8_namaste_india.admin:
+  title: 'Namaste India module settings'
+  description: 'example of how to make an admin settings page link'
+  parent: system.admin_config_development
+  ##The use of our route name 
+  route_name: d8_namaste_india.content
+  weight: 100
+  
+d8_namaste_india.description:
+  title: 'Namaste India Module Block Example'
+  description: 'Namaste India Module Block example demonstrate custom block and block configuration'
+  parent: system.admin_config_development
+  route_name: d8_namaste_india_block_example.description  
+  

@@ -1,0 +1,35 @@
+## YAML Template.
+---
+##Best Practice
+##Note that the space you reserve in the routing table for your module, 
+##the "d8_namaste_india" in d8_namaste_india.content on the first line is not required 
+##to be the machine name you chose for your module.
+##In order to be consistent across your routing and menu files, 
+##it is a best practice. 
+d8_namaste_india.content:
+  path: 'namaste-india'
+  defaults:
+    _controller: '\Drupal\d8_namaste_india\Controller\D8NamasteIndiaController::content'
+    _title: 'Namaste India Module - Page Example'
+  requirements:
+    _permission: 'access content'
+
+d8_namaste_india.settings:
+  path: '/admin/system/namaste-india/config/page-settings'
+  defaults:
+    ##Notice that instead of adding _content, 
+    ##this route adds a _form so that when a visitor goes to /admin/system/namaste-india/config/page-settings, 
+    ##the HelloConfigForm will get called.  
+    _form: 'Drupal\d8_namaste_india\Form\D8NamasteIndiaConfigForm'
+    _title: 'Namaste India Module - Working with Configuration Forms Example'
+  requirements:
+    _permission: 'administer site configuration'	
+        
+d8_namaste_india_block_example.description:
+  path: 'admin/system/namaste-india/config/namaste-india-block'
+  defaults:
+    _controller: '\Drupal\d8_namaste_india\Controller\D8NamasteIndiaBlockController::description'
+    _title: 'Namaste India Module - Block Example'
+  requirements:
+    _access: 'TRUE'
+    _permission: 'access administration pages'

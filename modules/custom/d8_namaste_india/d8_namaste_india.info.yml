@@ -1,0 +1,29 @@
+## YAML Template.
+## https://en.wikipedia.org/wiki/YAML
+## https://www.drupal.org/node/1935708
+---
+##The first three lines are primarily used in the administration UI when 
+##allowing users to enable or disable your module.
+##The name and description (both required) keys provide the text that is 
+##shown on the module administration page
+##The package key allows you to group like modules together
+name: D8 Namaste India
+description: Demonstrate 1.How to create a page callback showing "Namaste India" 2.How to creates a custom block to say "Namaste @name" 
+package: Drupal Mumbai
+##package: 'Drupal Mumbai' to group all of your projects custom modules together 
+##making them easier to locate and enable. 
+type: module
+##type key, which is new in Drupal 8, is required and indicates the type of 
+##extension, e.g. module, theme or profile.
+dependencies:
+  - block
+version: 1.0
+##For modules hosted on drupal.org, the version number will be filled in 
+##by the packaging script, you should not specify it manually, but leave out 
+##the version line entirely.
+core: 8.x
+##The core key is required and specifies the version of Drupal core that your 
+##module is compatible with.
+hidden: false
+##hidden: true which will hide your module from the module list on the Extend
+##page (/admin/modules).

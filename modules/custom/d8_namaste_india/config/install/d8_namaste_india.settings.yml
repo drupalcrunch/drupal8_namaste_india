@@ -1,0 +1,14 @@
+## YAML Template.
+---
+##Drupal core will automatically load the contents of that yaml file, 
+##when the module is activated and we can access it to provide 
+##a default configuration.
+##Remember that yaml is whitespace sensitive.
+
+##To make use of the value loaded into the Drupal object, 
+##however, we will need to add the defaultConfiguration() method to our NamasteIndia class
+## where we extends BlockBase class 
+d8_namaste_india_block:
+  name: 'Dries Buytaert'
+d8_namaste_india_page:
+  name: 'Webchick'  
